@@ -1,0 +1,32 @@
+{
+  "name": "miaow-vue-parse",
+  "version": "0.0.1",
+  "description": "vue loader for miaow",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "chn.will.liu@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "miaow": "https://github.com/miaowjs/miaow#f_module_schema",
+    "miaow-amd-parse": "https://github.com/miaowjs/miaow-amd-parse.git#f_module_schema",
+    "miaow-development-config": "^1.0.8",
+    "mocha": "^3.0.2",
+    "mocha-phantomjs": "^4.1.0"
+  },
+  "dependencies": {
+    "de-indent": "^1.0.2",
+    "lodash": "^4.15.0",
+    "miaow-util": "^1.1.0",
+    "parse5": "^2.2.0",
+    "vue-template-validator": "^1.1.5"
+  }
+}
