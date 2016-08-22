@@ -38,7 +38,12 @@ module.exports = function (options, callback) {
   var content = context.contents.toString();
   var parts;
 
-  parts = parse(content, options);
+  try {
+    parts = parse(content, options);
+  } catch (e) {
+    callback(e);
+    return;
+  }
 
   // check if there are any template syntax errors
   var templateWarnings = parts.template && parts.template.warnings;
