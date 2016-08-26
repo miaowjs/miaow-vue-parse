@@ -1,6 +1,6 @@
 {
   "name": "miaow-vue-parse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue parser for miaow",
   "main": "index.js",
   "scripts": {
