@@ -11,8 +11,8 @@
   "devDependencies": {
     "eslint": "^3.3.0",
     "eslint-config-airbnb": "^10.0.1",
-    "miaow": "^5.4.0",
-    "miaow-development-config": "^1.0.8",
+    "miaow": "^5.5.0",
+    "miaow-development-config": "^1.9.0",
     "mocha": "^3.0.2"
   },
   "dependencies": {
