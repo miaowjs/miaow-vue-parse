@@ -16,6 +16,7 @@
     "mocha": "^3.0.2"
   },
   "dependencies": {
+    "async": "^2.0.1",
     "de-indent": "^1.0.2",
     "lodash": "^4.15.0",
     "miaow-util": "^1.1.0",
