@@ -2,10 +2,9 @@
 
 ## 说明
 
-可参考Vue官方说明：http://cn.vuejs.org/guide/application.html
+*Vue 2.\* 版本的 parser，不支持1.*版本的 vue 单文件。*
 
-每个 `.vue` 文件包含 3 部分，`script`、`template` 和 `style`，template 和 style 部分可以省略.
-style 部分默认语言为 `less`, script 部分默认语言为 `es6` 。
+参考Vue官方说明：http://cn.vuejs.org/guide/application.html
 
 
 ```html
@@ -31,7 +30,7 @@ style 部分默认语言为 `less`, script 部分默认语言为 `es6` 。
   }
 </script>
 
-<style>
+<style scoped>
   .box{
     background: red;
     width: 100px;
@@ -40,22 +39,17 @@ style 部分默认语言为 `less`, script 部分默认语言为 `es6` 。
 </style>
 ```
 
-## src 引入方式
-
-```html
-<template src="./template.html"></template>
-<script src="./script.js"></script>
-<style src="./style.less"></style>
-```
-
 ## CSS Modules
+
+支持与 `webpack-vue-loader` 相同的 `scoped style`，自动添加属性到节点上。
+
 在 `style` 标签上添加 `module` 属性，即可在 vue 组件中使用 CSS Modules, 
-可在组件内部通过 `this.$styles` 来获取 modules。
+可在组件内部通过 `this.$style` 来获取 modules。
 
 ```html
 <template>
-  <div :class="$styles.box">
-    <div :class="[$styles.foo, $styles.bar]"></div> 
+  <div :class="$style.box">
+    <div :class="[$style.foo, $style.bar]"></div> 
   </div>
 </template>
 
@@ -64,7 +58,7 @@ style 部分默认语言为 `less`, script 部分默认语言为 `es6` 。
   export default {
     methods: {
       bz(){
-        if ($(this.$el).hasClass(this.$styles.box)) {
+        if ($(this.$el).hasClass(this.$style.box)) {
           //...
         }
       }
@@ -82,10 +76,20 @@ style 部分默认语言为 `less`, script 部分默认语言为 `es6` 。
     height: 100px;
   }
 </style>
-```
+``` 
 
-## 与 vue-loader 的差异
+module可以命名：
 
-+ template 不支持 lang
-+ script 与 style 的 lang 依赖于 miaow 带的其他 parser 的支持
-+ 不支持 Scoped CSS, 使用 miaow 支持的 CSS Modules 代替
+```html
+<template>
+  <div :class="$foo.box"></div>
+</template>
+
+<style module="foo">
+  .box{
+    background: red;
+  }
+</style>
+``` 
+
+
