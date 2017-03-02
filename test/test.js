@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var miaow = require('miaow');
 var assert = require('assert');
-var find = require('lodash.find');
+var find = require('lodash').find;
 
 var vueParse = require('..');
 describe('miaow-vue-parse', function () {
@@ -30,6 +30,6 @@ describe('miaow-vue-parse', function () {
   });
 
   it('VUE单文件编译正常', function () {
-    assert.equal(find(log.modules, { src: 'a.vue' }).destHash, '5414b17ab1ef456452ee9edf0c6dfc0d');
+    assert.equal(find(log.modules, { src: 'p/a.vue' }).destHash, '82433117d42e1c3161c2ebef2bdfe4ff');
   });
 });

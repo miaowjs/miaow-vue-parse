@@ -1,12 +1,17 @@
 <template>
-<div :class="$styles.box">
+<div :class="$style.box">
   <span>{{a+b}}</span>
-  <my-b></my-b>
+  <my-b>
+    <template scope="p">
+      <div :class="$style.boo">{{p.s}}</div>
+    </template>
+  </my-b>
 </div>
 </template>
 
 <script>
   import B from './b.vue';
+
   export default {
     data: ()=>{
       return {

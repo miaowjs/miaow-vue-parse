@@ -6,14 +6,13 @@
   <script src="http://cdn.bootcss.com/require.js/2.2.0/require.js"></script>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root"><router-view></router-view></div>
   <script>
     require([
-      'http://cdn.bootcss.com/vue/2.0.0-rc.1/vue.js#ignore' ,
-      'http://cdn.bootcss.com/vue-router/2.0.0-rc.3/vue-router.js#ignore',
-      './a.vue#url'
+      'http://cdn.bootcss.com/vue/2.2.1/vue.js#ignore' ,
+      'http://cdn.bootcss.com/vue-router/2.3.0/vue-router.js#ignore',
+      './p/a.vue#url'
     ], function (Vue, VueRouter, A) {
-
       Vue.config.devtools = true;
       Vue.use(VueRouter)
 
@@ -33,7 +32,6 @@
           this.$router.push('/');
         }
       }).$mount("#root");
-
     });
   </script>
 </body>
