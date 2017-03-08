@@ -1,12 +1,16 @@
 {
-  "name": "miaow-vue-parse",
+  "name": "miaow-vue-parse2",
   "version": "2.0.0",
-  "description": "vue parser for miaow",
+  "description": "vue2 parser for miaow",
   "main": "index.js",
   "scripts": {
     "test": "rm -rf ./test/cache ./test/output && mocha"
   },
   "author": "chn.will.liu@gmail.com",
+  "contributors": [
+    "chn.will.liu@gmail.com",
+    "anhulife@gmail.com"
+  ],
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.3.0",
@@ -26,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miaowjs/miaow-vue-parse.git"
+    "url": "git+https://github.com/miaowjs/miaow-vue-parse2.git"
   },
   "keywords": [
     "vue",
@@ -34,7 +38,7 @@
     "vue-parser"
   ],
   "bugs": {
-    "url": "https://github.com/liuxiaole/miaow-vue-parse/issues"
+    "url": "https://github.com/miaowjs/miaow-vue-parse2/issues"
   },
-  "homepage": "https://github.com/liuxiaole/miaow-vue-parse#readme"
+  "homepage": "https://github.com/miaowjs/miaow-vue-parse2#readme"
 }
