@@ -23,7 +23,8 @@
     "hash-sum": "^1.0.2",
     "miaow-util": "^1.1.0",
     "promise": "^7.1.1",
-    "vue-template-compiler": "^2.2.1"
+    "vue-template-compiler": "^2.2.1",
+    "vue-template-es2015-compiler": "^1.5.1"
   },
   "directories": {
     "test": "test"
