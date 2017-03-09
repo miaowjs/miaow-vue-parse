@@ -93,3 +93,5 @@ module可以命名：
 ``` 
 
 
+## 已知问题
+- https://github.com/vuejs/vue-loader/issues/547 不支持2.1.4以下的vue版本
